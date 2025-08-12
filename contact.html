@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contact | Glowline Creative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Glowline Creative to plan a 90-day growth sprint for your medspa.">
+  <link rel="canonical" href="https://www.glowlinecreative.com/contact.html">
+  <style>
+    body{margin:0;font-family:Inter,Arial,sans-serif;color:#111}
+    .wrap{max-width:720px;margin:0 auto;padding:24px}
+    input,textarea,button{width:100%;padding:12px;border:1px solid #ddd;border-radius:10px;margin-bottom:12px;font:inherit}
+    button{background:#0f6fff;color:#fff;border:none;cursor:pointer}
+    .muted{color:#666}
+  </style>
+</head>
+<body>
+<header class="wrap" style="border-bottom:1px solid #eee">
+  <nav>
+    <a href="/">Glowline Creative</a> |
+    <a href="/services.html">Services</a> |
+    <a href="/case-studies.html">Case Studies</a> |
+    <a href="/blog.html">Blog</a> |
+    <a href="/about.html">About</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <h1>Contact</h1>
+  <p>Tell us about your goals. We will recommend a focused plan for the next 90 days.</p>
+
+  <!-- Note: replace the action with your preferred form processor. For a quick option, use Formspree or your CRM form endpoint. -->
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Work email" required>
+    <input type="text" name="company" placeholder="Clinic or medspa name" required>
+    <input type="text" name="city" placeholder="City">
+    <textarea name="message" rows="6" placeholder="What services are you interested in?"></textarea>
+    <button type="submit">Request a strategy session</button>
+  </form>
+
+  <p class="muted">Prefer email? Contact us at <a href="mailto:hello@glowlinecreative.com">hello@glowlinecreative.com</a>.</p>
+</main>
+
+<footer class="wrap" style="border-top:1px solid #eee">
+  © <span id="y"></span> Glowline Creative
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
+</body>
+</html>
