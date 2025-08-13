@@ -50,3 +50,11 @@ a,button{outline-color:var(--brand)}
 
 /* Helpers */
 .muted{color:var(--muted)}
+
+/* Brand size: site-wide */
+.site-header .brand {
+  font-weight: 700;
+  font-size: clamp(28px, 5vw, 42px);
+  letter-spacing: 0.2px;
+  line-height: 1.1;
+}
