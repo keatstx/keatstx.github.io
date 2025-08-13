@@ -7,7 +7,7 @@
   <meta name="description" content="Guides and insights for medspa growth. Short-form video, paid social, local SEO, reviews, and conversion strategy.">
   <link rel="canonical" href="https://www.glowlinecreative.com/blog.html">
 
-  <!-- Article schema example for the first post -->
+  <!-- Example BlogPosting schema for the first post preview -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -21,20 +21,30 @@
   </script>
 
   <style>
-    body{margin:0;font-family:Inter,Arial,sans-serif;color:#111}
+    html {font-size:16px}
+    @media (max-width:720px){ html {font-size:15px} }
+    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:#111;line-height:1.6}
     .wrap{max-width:920px;margin:0 auto;padding:24px}
+    header{border-bottom:1px solid #eee}
+    footer{border-top:1px solid #eee;margin-top:48px;padding:24px 0;font-size:14px;color:#555}
+    .nav{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .nav a{min-height:44px;text-decoration:none;color:#111;padding:6px 0}
+    @media (max-width:720px){ .nav{flex-direction:column;align-items:flex-start} }
     .post{border-bottom:1px solid #eee;padding:20px 0}
-    .post h2{margin:0 0 8px}
+    .post h2{margin:0 0 8px;font-size:clamp(20px,3.2vw,26px)}
     .post p{margin:0 0 8px}
+    img{max-width:100%;height:auto;display:block}
+    a, button {outline-color:#0f6fff}
+    :focus {outline:2px solid #0f6fff; outline-offset:2px}
   </style>
 </head>
 <body>
-<header class="wrap" style="border-bottom:1px solid #eee">
-  <nav>
-    <a href="/">Glowline Creative</a> |
-    <a href="/services.html">Services</a> |
-    <a href="/case-studies.html">Case Studies</a> |
-    <a href="/about.html">About</a> |
+<header class="wrap">
+  <nav class="nav" aria-label="Primary">
+    <a href="/">Glowline Creative</a>
+    <a href="/services.html">Services</a>
+    <a href="/case-studies.html">Case Studies</a>
+    <a href="/about.html">About</a>
     <a href="/contact.html">Contact</a>
   </nav>
 </header>
@@ -44,7 +54,7 @@
 
   <article class="post">
     <h2><a href="#">Short-Form Video for Medspas. Formats that convert</a></h2>
-    <p>Hook fast. Narrate clearly. Add captions. Close with a direct CTA. Reels, TikTok, and Shorts work when the viewer knows what to do next.</p>
+    <p>Hook fast. Narrate clearly. Add captions. Close with a direct call to action. Reels, TikTok, and Shorts work when the viewer knows what to do next.</p>
     <ul>
       <li>Instagram Reels. 7 to 15 seconds with expert narration</li>
       <li>TikTok. Native style with trend awareness and strong opening</li>
@@ -63,7 +73,7 @@
   </article>
 </main>
 
-<footer class="wrap" style="border-top:1px solid #eee">
+<footer class="wrap">
   © <span id="y"></span> Glowline Creative
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </footer>

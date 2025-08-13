@@ -64,29 +64,44 @@
   </script>
 
   <style>
+    /* Base and layout */
+    html { font-size:16px }
+    @media (max-width:720px){ html { font-size:15px } }
     body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:#111;background:#fff;line-height:1.6}
     .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{padding:16px 0;border-bottom:1px solid #eee}
-    nav a{margin-right:16px;text-decoration:none;color:#111}
-    .hero{padding:64px 0}
-    .hero h1{font-size:42px;line-height:1.2;margin:0 0 12px}
-    .hero p{font-size:18px;margin:0 0 24px}
-    .cta{display:inline-block;background:#0f6fff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none}
+    header{padding:12px 0;border-bottom:1px solid #eee}
+    footer{margin-top:48px;padding:24px 0;border-top:1px solid #eee;font-size:14px;color:#555}
+    h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 12px}
+    h2{font-size:clamp(22px,3.6vw,28px);line-height:1.25;margin:40px 0 12px}
+    p, li {font-size:clamp(15px,2.6vw,18px)}
+
+    /* Nav */
+    .nav {display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .nav a{min-height:44px;text-decoration:none;color:#111;padding:6px 0}
+    @media (max-width:720px){
+      .nav {flex-direction:column;align-items:flex-start}
+    }
+
+    /* Components */
+    .hero{padding:48px 0}
+    .cta{display:inline-block;background:#0f6fff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;min-height:44px}
     .grid{display:grid;gap:24px}
     .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
     .card{border:1px solid #eee;border-radius:14px;padding:20px;background:#fff}
-    h2{margin-top:40px;margin-bottom:12px}
-    footer{margin-top:48px;padding:24px 0;border-top:1px solid #eee;font-size:14px;color:#555}
-    ul{padding-left:18px}
     .badge{display:inline-block;background:#f4f7ff;color:#1240ff;border:1px solid #dbe6ff;padding:6px 10px;border-radius:999px;font-size:12px;margin-right:8px;margin-bottom:8px}
     .two-col{display:grid;grid-template-columns:1fr;gap:24px}
     @media(min-width:900px){.two-col{grid-template-columns:1.2fr .8fr}}
     .muted{color:#666}
+
+    /* Media and focus */
+    img{max-width:100%;height:auto;display:block}
+    a, button {outline-color:#0f6fff}
+    :focus {outline:2px solid #0f6fff; outline-offset:2px}
   </style>
 </head>
 <body>
 <header class="wrap">
-  <nav>
+  <nav class="nav" aria-label="Primary">
     <a href="/">Glowline Creative</a>
     <a href="/services.html">Services</a>
     <a href="/case-studies.html">Case Studies</a>
@@ -110,14 +125,14 @@
         <span class="badge">Conversion-focused websites</span>
       </div>
     </div>
-    <div class="card">
+    <div class="card" role="complementary" aria-label="What we deliver">
       <h3 style="margin-top:0">What we deliver</h3>
       <ul>
-        <li>Scroll-stopping Reels, TikToks, and Shorts that build trust</li>
+        <li>Reels, TikToks, and Shorts that build trust</li>
         <li>High-intent leads from Meta, TikTok, Google, and LSA</li>
         <li>Local SEO that ranks for treatments in your city</li>
-        <li>Automated email and SMS nurture that improves rebook rate</li>
-        <li>Clear reporting that connects spend to ROI</li>
+        <li>Automated email and SMS nurture for rebooking</li>
+        <li>Reporting that connects spend to ROI</li>
       </ul>
     </div>
   </section>
@@ -127,32 +142,32 @@
     <div class="grid grid-3">
       <div class="card">
         <h3>Paid Social Ads</h3>
-        <p>Create and test multiple offers, audiences, and creatives across Meta, Instagram, and TikTok. Capture demand and scale the winners.</p>
+        <p>Create and test offers, audiences, and creatives across Meta, Instagram, and TikTok. Capture demand and scale winners.</p>
         <a href="/services.html#paid-ads">Learn more</a>
       </div>
       <div class="card">
         <h3>Short-Form Video</h3>
-        <p>Reels and TikToks that show real results, expert guidance, and a clear path to booking. Built from trend research and brand scripts.</p>
+        <p>Reels and TikToks that show results and expert guidance with clear calls to action.</p>
         <a href="/services.html#short-video">Learn more</a>
       </div>
       <div class="card">
         <h3>Hyper-Local SEO</h3>
-        <p>Own searches like “Botox near me.” Structured content, service hubs, and FAQ schema designed for AI summaries and featured results.</p>
+        <p>Own searches like “Botox near me.” Structured content and FAQs designed for AI summaries.</p>
         <a href="/services.html#seo">Learn more</a>
       </div>
       <div class="card">
         <h3>Reputation Management</h3>
-        <p>Monitor reviews, reply with care, and repurpose wins into testimonials and ads. Build trust where decisions happen.</p>
+        <p>Monitor reviews, respond with care, and turn five-star moments into content.</p>
         <a href="/services.html#reputation">Learn more</a>
       </div>
       <div class="card">
         <h3>Conversion Websites</h3>
-        <p>Fast pages with clear CTAs, social proof, and booking flows that convert ad clicks into consultations.</p>
+        <p>Fast pages with clear CTAs and booking flows that convert ad clicks into consultations.</p>
         <a href="/services.html#websites">Learn more</a>
       </div>
       <div class="card">
         <h3>Email and SMS Nurture</h3>
-        <p>Automated sequences that turn first visits into memberships and referrals. Timely, personal, and on brand.</p>
+        <p>Automated sequences that turn first visits into memberships and referrals.</p>
         <a href="/services.html#email-sms">Learn more</a>
       </div>
     </div>
@@ -161,19 +176,19 @@
   <section>
     <h2>How we work</h2>
     <ol>
-      <li><strong>Discover</strong>. Goals, offers, capacity, and brand voice</li>
-      <li><strong>Build</strong>. Creative, copy, and tracking with clean QA</li>
-      <li><strong>Launch</strong>. Ads, content cadence, and SEO foundations</li>
-      <li><strong>Optimize</strong>. Split tests, creative refresh, and budget shifts</li>
-      <li><strong>Scale</strong>. Add channels, membership programs, and referrals</li>
+      <li><strong>Discover</strong>. Goals, offers, capacity, and voice</li>
+      <li><strong>Build</strong>. Creative, copy, and tracking</li>
+      <li><strong>Launch</strong>. Ads, content cadence, and SEO</li>
+      <li><strong>Optimize</strong>. Split testing and budget shifts</li>
+      <li><strong>Scale</strong>. New channels and membership programs</li>
     </ol>
   </section>
 
   <section>
     <h2>FAQs</h2>
-    <details><summary>What content works best?</summary><div class="muted">Short-form video with a clear hook, expert voiceover, on-screen captions, and a direct call to action.</div></details>
+    <details><summary>What content works best?</summary><div class="muted">Short-form video with a strong hook, expert voiceover, captions, and a direct CTA.</div></details>
     <details><summary>Do you handle tracking and reporting?</summary><div class="muted">Yes. We set up GA4, pixels, call tracking, and dashboards that tie spend to booked consults.</div></details>
-    <details><summary>Can you work with our in-house team?</summary><div class="muted">Yes. We can run as your full growth team or integrate with internal marketing.</div></details>
+    <details><summary>Can you work with our team?</summary><div class="muted">Yes. We can run as your full growth partner or integrate with internal marketing.</div></details>
   </section>
 </main>
 
