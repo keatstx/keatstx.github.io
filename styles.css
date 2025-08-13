@@ -14,7 +14,7 @@ main.wrap{padding-top:24px;padding-bottom:24px}
 /* Header */
 .site-header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:50}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
-.brand{font-weight:600;text-decoration:none;color:var(--text)}
+.brand{font-weight:700;text-decoration:none;color:var(--text)}
 .nav{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .nav a{min-height:44px;display:inline-flex;align-items:center;text-decoration:none;color:var(--text);padding:6px 0}
 .nav a.active{color:var(--brand);border-bottom:2px solid var(--brand)}
