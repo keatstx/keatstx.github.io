@@ -57,4 +57,10 @@ a,button{outline-color:var(--brand)}
   font-size: clamp(28px, 5vw, 42px);
   letter-spacing: 0.2px;
   line-height: 1.1;
+  color: var(--brand); /* Uses your #0f6fff brand blue */
+  transition: color 0.25s ease; /* Smooth hover effect */
+}
+
+.site-header .brand:hover {
+  color: #0052cc; /* Slightly darker blue for hover */
 }
