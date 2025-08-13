@@ -5,123 +5,37 @@
   <title>Glowline Creative | AI-Powered Growth for Medspas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Glowline Creative helps medspas and aesthetic clinics grow with AI-powered marketing, hyper-local SEO, paid social, short-form video, and conversion-focused websites.">
-  <link rel="canonical" href="https://www.glowlinecreative.com/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Glowline Creative | AI-Powered Growth for Medspas">
-  <meta property="og:description" content="AI-powered marketing for medspas. Short-form video, paid ads, SEO, reviews, and conversion-focused websites.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.glowlinecreative.com/">
-  <meta property="og:image" content="https://www.glowlinecreative.com/og-image.jpg">
-
-  <!-- Organization Schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Glowline Creative",
-    "url":"https://www.glowlinecreative.com/",
-    "logo":"https://www.glowlinecreative.com/logo.png",
-    "sameAs":[
-      "https://www.linkedin.com/company/glowline-creative"
-    ],
-    "description":"AI-powered marketing agency for medspas and aesthetic clinics."
-  }
-  </script>
-
-  <!-- FAQ Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does Glowline Creative do?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We help medspas grow with AI-powered marketing. Our services include paid social, short-form video, hyper-local SEO, reputation management, conversion-focused websites, and automated email and SMS nurture."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Who is the ideal client?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A medspa or aesthetic clinic that wants measurable growth, stronger reviews, and a steady pipeline of booked consultations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How fast can we launch?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most clients launch a focused growth program in 2 to 4 weeks after onboarding and creative setup."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <style>
-    /* Base and layout */
-    html { font-size:16px }
-    @media (max-width:720px){ html { font-size:15px } }
-    body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;color:#111;background:#fff;line-height:1.6}
-    .wrap{max-width:1120px;margin:0 auto;padding:24px}
-    header{padding:12px 0;border-bottom:1px solid #eee}
-    footer{margin-top:48px;padding:24px 0;border-top:1px solid #eee;font-size:14px;color:#555}
-    h1{font-size:clamp(28px,5vw,42px);line-height:1.2;margin:0 0 12px}
-    h2{font-size:clamp(22px,3.6vw,28px);line-height:1.25;margin:40px 0 12px}
-    p, li {font-size:clamp(15px,2.6vw,18px)}
-
-    /* Nav */
-    .nav {display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-    .nav a{min-height:44px;text-decoration:none;color:#111;padding:6px 0}
-    @media (max-width:720px){
-      .nav {flex-direction:column;align-items:flex-start}
-    }
-
-    /* Components */
-    .hero{padding:48px 0}
-    .cta{display:inline-block;background:#0f6fff;color:#fff;padding:12px 18px;border-radius:10px;text-decoration:none;min-height:44px}
-    .grid{display:grid;gap:24px}
-    .grid-3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{border:1px solid #eee;border-radius:14px;padding:20px;background:#fff}
-    .badge{display:inline-block;background:#f4f7ff;color:#1240ff;border:1px solid #dbe6ff;padding:6px 10px;border-radius:999px;font-size:12px;margin-right:8px;margin-bottom:8px}
-    .two-col{display:grid;grid-template-columns:1fr;gap:24px}
-    @media(min-width:900px){.two-col{grid-template-columns:1.2fr .8fr}}
-    .muted{color:#666}
-
-    /* Media and focus */
-    img{max-width:100%;height:auto;display:block}
-    a, button {outline-color:#0f6fff}
-    :focus {outline:2px solid #0f6fff; outline-offset:2px}
-  </style>
+  <link rel="canonical" href="https://your-gh-pages-domain/">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-  <nav class="nav">
-    <a href="index.html">Glowline Creative</a>
-    <a href="services.html">Services</a>
-    <a href="case-studies.html">Case Studies</a>
-    <a href="blog.html">Blog</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+
+<div id="site-header"></div>
+<script>
+  fetch('header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('site-header').innerHTML = html;
+      const path = window.location.pathname.split('/').pop() || 'index.html';
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      [...nav.querySelectorAll('a')].forEach(a => {
+        const href = a.getAttribute('href');
+        if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
+        if ((path === 'index.html' || path === '') && href === 'index.html') a.classList.add('active');
+      });
+    });
+</script>
 
 <main class="wrap">
   <section class="hero two-col">
     <div>
       <h1>AI-powered growth for medspas and aesthetic clinics</h1>
       <p>We combine AI, short-form video, paid social, and hyper-local SEO to turn attention into booked consultations and long-term loyalty.</p>
-      <a class="cta" href="/contact.html">Book a strategy session</a>
+      <a class="cta" href="contact.html">Book a strategy session</a>
       <div style="margin-top:16px">
-        <span class="badge">Short-form video</span>
-        <span class="badge">Paid social</span>
-        <span class="badge">Hyper-local SEO</span>
-        <span class="badge">Reviews and reputation</span>
+        <span class="badge">Short-form video</span><span class="badge">Paid social</span>
+        <span class="badge">Hyper-local SEO</span><span class="badge">Reviews and reputation</span>
         <span class="badge">Conversion-focused websites</span>
       </div>
     </div>
@@ -140,36 +54,12 @@
   <section>
     <h2>Services built for measurable results</h2>
     <div class="grid grid-3">
-      <div class="card">
-        <h3>Paid Social Ads</h3>
-        <p>Create and test offers, audiences, and creatives across Meta, Instagram, and TikTok. Capture demand and scale winners.</p>
-        <a href="/services.html#paid-ads">Learn more</a>
-      </div>
-      <div class="card">
-        <h3>Short-Form Video</h3>
-        <p>Reels and TikToks that show results and expert guidance with clear calls to action.</p>
-        <a href="/services.html#short-video">Learn more</a>
-      </div>
-      <div class="card">
-        <h3>Hyper-Local SEO</h3>
-        <p>Own searches like “Botox near me.” Structured content and FAQs designed for AI summaries.</p>
-        <a href="/services.html#seo">Learn more</a>
-      </div>
-      <div class="card">
-        <h3>Reputation Management</h3>
-        <p>Monitor reviews, respond with care, and turn five-star moments into content.</p>
-        <a href="/services.html#reputation">Learn more</a>
-      </div>
-      <div class="card">
-        <h3>Conversion Websites</h3>
-        <p>Fast pages with clear CTAs and booking flows that convert ad clicks into consultations.</p>
-        <a href="/services.html#websites">Learn more</a>
-      </div>
-      <div class="card">
-        <h3>Email and SMS Nurture</h3>
-        <p>Automated sequences that turn first visits into memberships and referrals.</p>
-        <a href="/services.html#email-sms">Learn more</a>
-      </div>
+      <div class="card"><h3>Paid Social Ads</h3><p>Create and test offers, audiences, and creatives across Meta, Instagram, and TikTok. Capture demand and scale winners.</p><a href="services.html#paid-ads">Learn more</a></div>
+      <div class="card"><h3>Short-Form Video</h3><p>Reels and TikToks that show results and expert guidance with clear calls to action.</p><a href="services.html#short-video">Learn more</a></div>
+      <div class="card"><h3>Hyper-Local SEO</h3><p>Own searches like “Botox near me.” Structured content and FAQs designed for AI summaries.</p><a href="services.html#seo">Learn more</a></div>
+      <div class="card"><h3>Reputation Management</h3><p>Monitor reviews, respond with care, and turn five-star moments into content.</p><a href="services.html#reputation">Learn more</a></div>
+      <div class="card"><h3>Conversion Websites</h3><p>Fast pages with clear CTAs and booking flows that convert ad clicks into consultations.</p><a href="services.html#websites">Learn more</a></div>
+      <div class="card"><h3>Email and SMS Nurture</h3><p>Automated sequences that turn first visits into memberships and referrals.</p><a href="services.html#email-sms">Learn more</a></div>
     </div>
   </section>
 
@@ -183,17 +73,10 @@
       <li><strong>Scale</strong>. New channels and membership programs</li>
     </ol>
   </section>
-
-  <section>
-    <h2>FAQs</h2>
-    <details><summary>What content works best?</summary><div class="muted">Short-form video with a strong hook, expert voiceover, captions, and a direct CTA.</div></details>
-    <details><summary>Do you handle tracking and reporting?</summary><div class="muted">Yes. We set up GA4, pixels, call tracking, and dashboards that tie spend to booked consults.</div></details>
-    <details><summary>Can you work with our team?</summary><div class="muted">Yes. We can run as your full growth partner or integrate with internal marketing.</div></details>
-  </section>
 </main>
 
-<footer class="wrap">
-  <div>© <span id="y"></span> Glowline Creative. All rights reserved.</div>
+<footer class="site-footer">
+  <div class="wrap">© <span id="y"></span> Glowline Creative</div>
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </footer>
 </body>
