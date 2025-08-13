@@ -51,16 +51,21 @@ a,button{outline-color:var(--brand)}
 /* Helpers */
 .muted{color:var(--muted)}
 
-/* Brand size: site-wide */
+/* Brand link styling — keep this LAST in the file */
 .site-header .brand {
   font-weight: 700;
   font-size: clamp(28px, 5vw, 42px);
   letter-spacing: 0.2px;
   line-height: 1.1;
-  color: var(--brand); /* Uses your #0f6fff brand blue */
-  transition: color 0.25s ease; /* Smooth hover effect */
+  color: var(--brand);              /* #0f6fff from your theme */
+  transition: color 0.25s ease;
 }
 
-.site-header .brand:hover {
-  color: #0052cc; /* Slightly darker blue for hover */
+/* Ensure visited links don’t override brand color */
+.site-header .brand:visited { color: var(--brand); }
+
+/* Lighter hover/focus so it “pops” */
+.site-header .brand:hover,
+.site-header .brand:focus-visible {
+  color: #3681ff;                   /* lighter than #0f6fff */
 }
