@@ -70,8 +70,9 @@ a,button{outline-color:var(--brand)}
   color: #3681ff;                   /* lighter than #0f6fff */
 }
 
-/* Keep inner content narrower but aligned with the site grid */
+/* About page inner content width, aligned to the left edge of .wrap */
 .content-narrow {
-  max-width: 840px;
-  width: 100%;
+  max-width: 840px;   /* controls line length */
+  margin: 0;          /* prevents centering */
+  /* no width:100%; leave the block to size naturally up to 840px */
 }
