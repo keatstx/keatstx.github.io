@@ -10,18 +10,24 @@
 </head>
 <body>
 
+<!-- Shared header container -->
 <div id="site-header"></div>
 <script>
   fetch('header.html')
     .then(r => r.text())
     .then(html => {
       document.getElementById('site-header').innerHTML = html;
-      const nav=document.querySelector('.nav'); if(nav){ nav.querySelectorAll('a').forEach(a=>{ if(a.getAttribute('href')==='blog.html') a.classList.add('active'); });}
+      const nav = document.querySelector('.nav');
+      if (nav) {
+        nav.querySelectorAll('a').forEach(a => {
+          if (a.getAttribute('href') === 'blog.html') a.classList.add('active');
+        });
+      }
     });
 </script>
 
 <main class="wrap">
-  <title>Insights</title>
+  <h1>Insights</h1>
 
   <article class="card" style="border-bottom:1px solid #eee">
     <h2>Short-Form Video for Medspas. Formats that convert</h2>
