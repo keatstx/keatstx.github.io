@@ -82,6 +82,10 @@ a,button{outline-color:var(--brand)}
   padding-top: 0;       /* was adding extra space */
   padding-bottom: 48px; /* keep your bottom space as-is */
 }
-/* Narrow inner containers that align to the left edge of .wrap */
-.content-narrow { max-width: 840px; margin: 0; }
-.content-720    { max-width: 720px;  margin: 0; }
+
+
+/* Narrow inner containers that align with the left edge of .wrap */
+.content-720 { max-width: 720px; margin: 0; }
+
+/* Safety: if an inline max-width remains on <main>, neutralize it */
+main.wrap[style*="max-width"] { max-width: var(--max) !important; }
