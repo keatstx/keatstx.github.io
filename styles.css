@@ -69,3 +69,9 @@ a,button{outline-color:var(--brand)}
 .site-header .brand:focus-visible {
   color: #3681ff;                   /* lighter than #0f6fff */
 }
+
+/* Keep inner content narrower but aligned with the site grid */
+.content-narrow {
+  max-width: 840px;
+  width: 100%;
+}
