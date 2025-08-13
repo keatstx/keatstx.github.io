@@ -82,3 +82,6 @@ a,button{outline-color:var(--brand)}
   padding-top: 0;       /* was adding extra space */
   padding-bottom: 48px; /* keep your bottom space as-is */
 }
+/* Narrow inner containers that align to the left edge of .wrap */
+.content-narrow { max-width: 840px; margin: 0; }
+.content-720    { max-width: 720px;  margin: 0; }

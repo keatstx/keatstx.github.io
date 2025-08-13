@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Contact Glowline Creative to plan a 90-day growth sprint for your medspa.">
   <link rel="canonical" href="https://your-gh-pages-domain/contact.html">
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 
@@ -21,35 +21,37 @@
     });
 </script>
 
-<main class="wrap" style="max-width:720px">
-  <h1>Contact</h1>
-  <p>Tell us about your goals. We will recommend a focused plan for the next 90 days.</p>
+<main class="wrap">
+  <div class="content-720">
+    <h1>Contact</h1>
+    <p>Tell us about your goals. We will recommend a focused plan for the next 90 days.</p>
 
-  <form id="contactForm" action="https://formspree.io/f/mblkwqjk" method="POST">
-    <label for="name">Your name</label>
-    <input id="name" type="text" name="name" required>
+    <form id="contactForm" action="https://formspree.io/f/mblkwqjk" method="POST">
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" required>
 
-    <label for="email">Work email</label>
-    <input id="email" type="email" name="email" required>
+      <label for="email">Work email</label>
+      <input id="email" type="email" name="email" required>
 
-    <label for="company">Clinic or medspa name</label>
-    <input id="company" type="text" name="company" required>
+      <label for="company">Clinic or medspa name</label>
+      <input id="company" type="text" name="company" required>
 
-    <label for="city">City</label>
-    <input id="city" type="text" name="city">
+      <label for="city">City</label>
+      <input id="city" type="text" name="city">
 
-    <label for="message">What services are you interested in?</label>
-    <textarea id="message" name="message" rows="6"></textarea>
+      <label for="message">What services are you interested in?</label>
+      <textarea id="message" name="message" rows="6"></textarea>
 
-    <!-- Optional subject line visible in Formspree dashboard emails -->
-    <input type="hidden" name="_subject" value="New strategy session request">
+      <!-- Optional subject line visible in Formspree dashboard emails -->
+      <input type="hidden" name="_subject" value="New strategy session request">
 
-    <button type="submit">Request a strategy session</button>
-  </form>
+      <button type="submit">Request a strategy session</button>
+    </form>
 
-  <p id="formStatus" class="muted" role="status" aria-live="polite" style="margin-top:8px;"></p>
+    <p id="formStatus" class="muted" role="status" aria-live="polite" style="margin-top:8px;"></p>
 
-  <p class="muted" style="margin-top:16px">Prefer email? Contact us at <a href="mailto:hello@glowlinecreative.com">hello@glowlinecreative.com</a>.</p>
+    <p class="muted" style="margin-top:16px">Prefer email? Contact us at <a href="mailto:hello@glowlinecreative.com">hello@glowlinecreative.com</a>.</p>
+  </div>
 </main>
 
 <footer class="site-footer">
