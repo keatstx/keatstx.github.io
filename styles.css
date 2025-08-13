@@ -76,8 +76,9 @@ a,button{outline-color:var(--brand)}
   margin: 0;          /* prevents centering */
   /* no width:100%; leave the block to size naturally up to 840px */
 }
-/* Make homepage hero top spacing match other pages (~32px) */
+
+/* Normalize homepage spacing: rely on main.wrap padding only */
 .hero {
-  padding-top: 16px;   /* header margin + this padding ≈ 32px total */
-  padding-bottom: 48px; /* keep bottom spacing for balance */
+  padding-top: 0;       /* was adding extra space */
+  padding-bottom: 48px; /* keep your bottom space as-is */
 }
