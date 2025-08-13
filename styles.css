@@ -76,3 +76,7 @@ a,button{outline-color:var(--brand)}
   margin: 0;          /* prevents centering */
   /* no width:100%; leave the block to size naturally up to 840px */
 }
+/* Match homepage hero spacing to other pages */
+.hero h1 {
+  margin-bottom: 6px; /* tighter gap between headline and paragraph */
+}
