@@ -67,7 +67,7 @@ a,button{outline-color:var(--brand)}
 /* Lighter hover/focus so it “pops” */
 .site-header .brand:hover,
 .site-header .brand:focus-visible {
-  color: #3681ff;                   /* lighter than #0f6fff */
+  color: #0038ff;                   /* lighter than #0f6fff */
 }
 
 /* About page inner content width, aligned to the left edge of .wrap */
