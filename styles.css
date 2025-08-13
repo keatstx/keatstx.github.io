@@ -76,12 +76,8 @@ a,button{outline-color:var(--brand)}
   margin: 0;          /* prevents centering */
   /* no width:100%; leave the block to size naturally up to 840px */
 }
-/* Tighten headline-to-paragraph spacing in the homepage hero */
-.hero h1 {
-  margin-bottom: 6px;            /* small visual gap under the H1 */
-}
-
-/* Defeat margin-collapsing: control the first paragraph after the H1 */
-.hero h1 + p {
-  margin-top: 6px;               /* was browser default (~16px) */
+/* Make homepage hero top spacing match other pages (~32px) */
+.hero {
+  padding-top: 16px;   /* header margin + this padding ≈ 32px total */
+  padding-bottom: 48px; /* keep bottom spacing for balance */
 }
