@@ -10,19 +10,20 @@
 </head>
 <body>
 
-<!-- Shared header container -->
 <div id="site-header"></div>
 <script>
   fetch('header.html')
     .then(r => r.text())
     .then(html => {
       document.getElementById('site-header').innerHTML = html;
+      const path = window.location.pathname.split('/').pop() || 'index.html';
       const nav = document.querySelector('.nav');
-      if (nav) {
-        nav.querySelectorAll('a').forEach(a => {
-          if (a.getAttribute('href') === 'blog.html') a.classList.add('active');
-        });
-      }
+      if (!nav) return;
+      [...nav.querySelectorAll('a')].forEach(a => {
+        const href = a.getAttribute('href');
+        if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
+        if ((path === 'index.html' || path === '') && href === 'index.html') a.classList.add('active');
+      });
     });
 </script>
 
