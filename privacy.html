@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Privacy Policy | Glowline Creative</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Glowline Creative Privacy Policy. Learn how we collect, use, and protect information in connection with our AI-powered marketing services.">
+  <link rel="canonical" href="https://your-gh-pages-domain/privacy.html">
+  <link rel="stylesheet" href="styles.css?v=9">
+</head>
+<body>
+
+<div id="site-header"></div>
+<script>
+  fetch('header.html')
+    .then(r => r.text())
+    .then(html => {
+      document.getElementById('site-header').innerHTML = html;
+      const path = window.location.pathname.split('/').pop() || 'index.html';
+      const nav = document.querySelector('.nav');
+      if (!nav) return;
+      [...nav.querySelectorAll('a')].forEach(a => {
+        const href = a.getAttribute('href');
+        if ((path === '' && href === 'index.html') || href === path) a.classList.add('active');
+        if ((path === 'index.html' || path === '') && href === 'index.html') a.classList.add('active');
+      });
+    });
+</script>
+
+<main class="wrap">
+  <div class="content-720">
+    <h1>Privacy Policy</h1>
+    <p class="muted">Effective August 19, 2025</p>
+    <p>This Privacy Policy explains how Glowline Creative LLC (“Glowline,” “we,” “our,” or “us”) collects, uses, and shares information in connection with our website and Services.</p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+      <li><strong>Contact and business information</strong> such as name, email, phone, clinic name, and role.</li>
+      <li><strong>Engagement information</strong> such as service interests, messages, and meeting notes.</li>
+      <li><strong>Website and device data</strong> such as pages visited, referring URLs, IP address, browser, and approximate location.</li>
+      <li><strong>Marketing and advertising data</strong> such as cookie identifiers, pixels, audience segments, and campaign performance.</li>
+      <li><strong>Content you provide</strong> such as testimonials, visuals, and before‑and‑after materials with documented consent.</li>
+    </ul>
+
+    <h2>2. Sources</h2>
+    <p>We collect information directly from you, automatically through our site and tools, and from third‑party platforms you connect or grant access to, including ad platforms, analytics, and CRMs.</p>
+
+    <h2>3. How We Use Information</h2>
+    <ul>
+      <li>Provide and improve the Services, including creative development, campaign management, and reporting.</li>
+      <li>Personalize content and measure the effectiveness of ads and SEO.</li>
+      <li>Communicate about projects, proposals, invoices, updates, and support.</li>
+      <li>Protect against fraud, misuse, and security incidents, and maintain legal compliance.</li>
+    </ul>
+
+    <h2>4. Cookies and Similar Technologies</h2>
+    <p>We and our partners use cookies, pixels, and analytics tools to operate the site, remember preferences, measure performance, and deliver or retarget ads. You can control cookies through browser settings. Blocking cookies may impact site features.</p>
+
+    <h2>5. Sharing of Information</h2>
+    <ul>
+      <li><strong>Vendors and processors</strong> that help deliver the Services under contractual obligations.</li>
+      <li><strong>Advertising and analytics partners</strong> when running campaigns or measuring performance.</li>
+      <li><strong>Professional advisors</strong> such as lawyers and accountants.</li>
+      <li><strong>Legal and safety</strong> when required by law or to protect rights, safety, or security.</li>
+      <li><strong>Business transfers</strong> in connection with a merger, acquisition, or asset sale.</li>
+    </ul>
+
+    <h2>6. PHI and HIPAA</h2>
+    <p>We do not require protected health information (“PHI”) to provide the Services. If PHI processing is necessary, we will execute a Business Associate Agreement (BAA) and restrict use to the minimum necessary. Do not send PHI through website forms or unsecured channels.</p>
+
+    <h2>7. Your Choices</h2>
+    <ul>
+      <li><strong>Marketing communications</strong>. You can opt out at any time by using the unsubscribe link in emails or by contacting us.</li>
+      <li><strong>Cookies</strong>. Use your browser settings to block or delete cookies.</li>
+      <li><strong>Ad preferences</strong>. Adjust settings with platforms such as Google, Meta, and TikTok to manage interest‑based ads.</li>
+    </ul>
+
+    <h2>8. Data Security and Retention</h2>
+    <p>We use reasonable administrative, technical, and physical safeguards to protect information. No method is 100 percent secure. We retain information for as long as needed for the purposes described or as required by law.</p>
+
+    <h2>9. International Data Transfers</h2>
+    <p>If you access the site from outside the United States, your information may be transferred to and processed in the U.S. where laws may differ from those in your jurisdiction.</p>
+
+    <h2>10. Children’s Privacy</h2>
+    <p>Our site and Services are intended for business users. We do not knowingly collect personal information from children under 13.</p>
+
+    <h2>11. State and Regional Disclosures</h2>
+    <p>If you reside in a region with privacy rights such as the California Consumer Privacy Act (CCPA/CPRA) or the EU/UK GDPR, you may have rights to access, correct, delete, or restrict processing of personal information, and to opt out of certain sharing or targeted advertising. To exercise a right, contact us at <a href="mailto:privacy@glowlinecreative.com">privacy@glowlinecreative.com</a>. We may verify your request as permitted by law.</p>
+
+    <h2>12. Do Not Track</h2>
+    <p>Some browsers transmit Do Not Track signals. Because there is no consistent industry response, our site may not respond to these signals.</p>
+
+    <h2>13. Changes to this Policy</h2>
+    <p>We may update this Policy periodically. The “Effective” date above reflects the latest version. Material changes will be posted on this page.</p>
+
+    <h2>14. Contact</h2>
+    <p>Questions or requests can be sent to <a href="mailto:privacy@glowlinecreative.com">privacy@glowlinecreative.com</a> or <a href="mailto:hello@glowlinecreative.com">hello@glowlinecreative.com</a>.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">© <span id="y"></span> Glowline Creative</div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</footer>
+</body>
+</html>
