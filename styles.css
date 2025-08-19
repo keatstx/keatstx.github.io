@@ -90,22 +90,19 @@ a,button{outline-color:var(--brand)}
 /* Safety: if an inline max-width remains on <main>, neutralize it */
 main.wrap[style*="max-width"] { max-width: var(--max) !important; }
 
-/* Footer alignment: center links within the same wrap width as content */
+/* === Footer alignment fix: keep links within centered wrap and inline with copyright === */
 .site-footer .wrap {
   display: flex;
-  justify-content: center;   /* center by default on small screens */
+  justify-content: center;   /* center on small screens */
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   text-align: center;
 }
-
 @media (min-width: 768px) {
   .site-footer .wrap {
-    justify-content: space-between;  /* balanced on wider screens */
+    justify-content: space-between; /* balanced on larger screens */
   }
 }
-
-/* Optional niceties */
-.site-footer a { text-decoration: none; }
-.site-footer a:hover { text-decoration: underline; }
+.site-footer .footer-links a { text-decoration: none; }
+.site-footer .footer-links a:hover { text-decoration: underline; }
